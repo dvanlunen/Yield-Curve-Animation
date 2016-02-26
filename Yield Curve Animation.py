@@ -54,7 +54,7 @@ class UpdateDist(object):
         if self.period != len(dates)-1:
             self.period += 1
         else:
-            self.period = 50
+            self.period = 0
         # set up data masking out missing values
         ydat = yield_curve[self.period, :].astype(np.double)
         ymask = np.isfinite(ydat)
